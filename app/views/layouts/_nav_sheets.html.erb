@@ -1,0 +1,43 @@
+<nav>
+    <div class="logo"><img src="assets/squarelogo.png" class="logo-img"></div>
+
+<ul>
+    <li><a href="#">Spreadsheets</a></li>
+    <li><a href="#">Assistants</a></li>
+</ul>
+            <div class="pagination">
+<div class="addnew">
+    <span>Add new</span><span class="plus-icon"></span>
+    <div class="nav-divider"></div>
+</div>
+ <ul>
+    <li><a href="#1">Sheet 1</a></li>
+    <li><a href="#2">Sheet 2</a></li>
+    <li><a href="#3">Sheet 3</a></li>
+    <li><a href="#4">Sheet 4</a></li>
+    <li><a href="#5">Sheet 5</a></li>
+    <li><a href="#6">Sheet 6</a></li>
+    <li><a href="sheets_demo.html">Presidents</a></li>
+</ul> 
+</div>
+<!--<ul>
+  <li><a href="index.html">Dashboard</a></li>
+  <li><a href="sheets.html" class="active-nav">Spreadsheets</a></li>
+  <li><a href="messenger.html">Messages<span class="alert">22</span></a></li>
+  <li><a href="#">Feedback</a></li>
+</ul>-->
+</nav>
+
+<div class="container">
+    <header>
+    <div class="page-title">
+        <h1>Your Sheets</h1>
+    </div>
+
+    <div class="top-nav">
+      <!-- margin-right feedback 20, referrals 10 -->
+        <%= link_to "Feedback", feedback_path, {:style => 'margin-right:20px'} %>
+        <%= link_to "Referrals", referrals_path, {:style => 'margin-right:10px'} %>
+        <a href="#" class="gear-icon">&nbsp;&nbsp;&nbsp;&nbsp;</a> 
+    </div>
+    </header>

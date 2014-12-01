@@ -1,7 +1,12 @@
 Prospectingzen::Application.routes.draw do
-  get 'feedback' => 'pages#feedback'
-
   root :to => 'pages#home'
+  devise_for :users
+  #get 'sheets' => 'pages#sheets'
+  get 'feedback' => 'pages#feedback'
+  get 'referrals' => 'pages#referrals'
+  get 'landing' => 'pages#landing'
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
