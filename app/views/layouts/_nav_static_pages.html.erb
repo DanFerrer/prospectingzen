@@ -1,0 +1,28 @@
+<nav>
+    <div class="logo"><img src="assets/squarelogo.png" class="logo-img"></div>
+
+<ul>
+    <li><a href="#">Spreadsheets</a></li>
+    <li><a href="#">Assistants</a></li>
+</ul>
+<!--<ul>
+  <li><a href="index.html">Dashboard</a></li>
+  <li><a href="sheets.html" class="active-nav">Spreadsheets</a></li>
+  <li><a href="messenger.html">Messages<span class="alert">22</span></a></li>
+  <li><a href="#">Feedback</a></li>
+</ul>-->
+</nav>
+
+<div class="container">
+    <header>
+    <div class="page-title">
+        <h1>Set the Static page header variable here</h1>
+    </div>
+
+    <div class="top-nav">
+      <!-- margin-right feedback 20, referrals 10 -->
+        <%= link_to "Feedback", feedback_path, {:style => 'margin-right:20px'} %>
+        <%= link_to "Referrals", referrals_path, {:style => 'margin-right:10px'} %>
+        <a href="#" class="gear-icon">&nbsp;&nbsp;&nbsp;&nbsp;</a> 
+    </div>
+    </header>

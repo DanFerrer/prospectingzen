@@ -1,3 +1,59 @@
+@import 'bootstrap';
+
+.checkbox {
+    margin-left:20px;
+}
+
+.center {
+     text-align: center;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.box {
+    margin:0 auto;
+}
+
+.panel {
+    max-width:500px;
+    margin: 0 auto;
+}
+
+.panel-holder {
+    margin: 0 auto;
+    max-width:500px;
+}
+
+.panel-holder-holder {
+    margin: 0 0 25px 0;
+}
+
+.actions {
+    float:right;
+}
+
+.description {
+    float:left;
+}
+
+.username {
+    float:right;
+    margin: 0 5px;
+    width:29%;
+}
+
+a {
+    text-decoration:none;
+}
+
+.glyphicon-chevron-left {
+    font-size:28px;
+}
+
+
+
 nav {
     position: fixed;
     width:210px;
