@@ -1,8 +1,7 @@
-
 <% if user_signed_in? %>
 <%= render 'layouts/nav_sheets' %>
 <div class="content-sheets">
-    <div id="example1" class="handsontable"></div>
+  Display shortcuts and the latest info
 </div>
 <%= link_to "Edit Profile", edit_user_registration_path %>
 <%= link_to "Logout", destroy_user_session_path, method: :delete %>

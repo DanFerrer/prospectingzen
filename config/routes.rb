@@ -3,6 +3,7 @@ Prospectingzen::Application.routes.draw do
   devise_for :users
   #get 'sheets' => 'pages#sheets'
   get 'feedback' => 'pages#feedback'
+  get 'events' => 'pages#events'
   get 'referrals' => 'pages#referrals'
   get 'landing' => 'pages#landing'
 
