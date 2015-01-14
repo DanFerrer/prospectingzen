@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141213195717) do
+ActiveRecord::Schema.define(version: 20150114195725) do
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -27,6 +27,9 @@ ActiveRecord::Schema.define(version: 20141213195717) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.string   "eventname"
+    t.string   "eventlocation"
+    t.string   "eventnotes"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
