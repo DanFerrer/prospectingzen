@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
 <%= render 'layouts/nav_sheets' %>
 <div class="content-sheets">
-  Display shortcuts and the latest info
+<p>Looks like you don't have any work completed just yet. Give your assistant a task and check back after you've gotten the email notifying you that they have finished.</p>
 </div>
 <%= link_to "Edit Profile", edit_user_registration_path %>
 <%= link_to "Logout", destroy_user_session_path, method: :delete %>
@@ -9,9 +9,7 @@
 </div>   
 
 <% else %>
-<%= link_to "Sign up!", new_user_registration_path %>
-<br />or<br />
+<%= render 'layouts/loginheader' %>
 <%= link_to "Login", new_user_session_path %>
-
 <% end %>
 

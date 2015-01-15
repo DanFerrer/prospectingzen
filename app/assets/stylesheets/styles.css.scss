@@ -6,6 +6,72 @@
     width: 94%!important;
 }
 
+.login-form {
+    width: 70%!important;
+    margin: 0 auto;
+}
+
+.top-body {
+    margin: 25px 0 0 0;
+}
+
+.bottom-link {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-color: whitesmoke;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.signupnow {
+display: block;
+padding: 10px 30px;
+margin: 0 auto;
+font-size: 12px;
+line-height: 15px;
+color: #999;
+}
+
+
+.checkbox-left {
+    float: right;
+    margin-right: 58px;
+}
+
+.login-button {
+    margin-left: 58px;
+}
+
+.btn-primary {
+    background-color: #74b879!important;
+    border-color: #639967!important;
+    color: white;
+}
+
+.btn-primary:hover {
+    opacity: 0.75;
+}
+
+.login-container {
+ border: 0px solid red;
+ margin: 0 auto;
+ padding: 25px;
+ width: 200px;
+}
+
+.login-img {
+    width: 200px;
+    margin: 25px 0 10px 0;
+}
+
+.front {
+    z-index: 5;
+}
+
 @import 'bootstrap';
 
 .checkbox {
@@ -252,6 +318,15 @@ li a:hover, li a:active {
 textarea {
 	width: 80%;
 	height: 80px;
+}
+
+.content-events {
+    margin: 0 auto;    
+    height: 100%;
+    max-width: 500px;
+    padding: 20px;
+    /*border-left:1px solid rgba(0, 0, 0, .1);
+    border-right:1px solid rgba(0, 0, 0, .1); */
 }
 
 .content-referalls {

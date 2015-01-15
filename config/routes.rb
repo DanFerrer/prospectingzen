@@ -1,12 +1,26 @@
 Prospectingzen::Application.routes.draw do
-  root :to => 'pages#home'
+  #root :to => 'pages#home'
   
   #get 'sheets' => 'pages#sheets'
   get 'feedback' => 'pages#feedback'
   get 'events' => 'pages#events'
   get 'referrals' => 'pages#referrals'
   get 'landing' => 'pages#landing'
+  get 'assistants' => 'pages#assistants'
   devise_for :users
+
+  devise_scope :user do
+  authenticated :user do
+    root 'pages#home', as: :authenticated_root
+  end
+  unauthenticated do
+    root 'devise/sessions#new', as: :unauthenticated_root
+  end
+end
+
+
+
+
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
