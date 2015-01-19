@@ -20,7 +20,7 @@
     bottom: 0;
     left: 0;
     text-align: center;
-    background-color: whitesmoke;
+    background-color: #fff;
     border-top: 1px solid #ddd;
     width: 100%;
     margin: 0;
@@ -44,6 +44,10 @@ color: #999;
 
 .login-button {
     margin-left: 58px;
+}
+
+label {
+    padding-left: 0px!important;
 }
 
 .btn-primary {
@@ -208,6 +212,7 @@ box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.2);
     float: left;
 }
 
+/*
 .alert {
     margin: 0 40px;
     border: 1px solid rgba(0, 0, 0, 0.5);
@@ -215,6 +220,7 @@ box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.2);
     border-radius: 50%;
     background-color:  rgba(0, 0, 0, 0.3);
 }
+*/
 
 .addnew {
 	padding: 20px 30px 15px 20px;
