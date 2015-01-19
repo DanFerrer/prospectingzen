@@ -1,5 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @events = Event.all
@@ -9,14 +11,14 @@ class EventsController < ApplicationController
   end
 
   def new
-    @event = Event.new
+    @event = current_user.events.build
   end
 
   def edit
   end
 
   def create
-    @event = Event.new(event_params)
+    @event = current_user.events.build(event_params)
 
     respond_to do |format|
       if @event.save
@@ -53,6 +55,11 @@ class EventsController < ApplicationController
     def set_event
       @event = Event.find(params[:id])
     end
+
+    def correct_user 
+      @event = current_user.events.find_by(id: params[:id])
+      redirect_to events_path if @event.nil?
+    end  
 
     def event_params
       params.require(:event).permit(:eventname, :eventlocation, :eventdate, :eventnotes)

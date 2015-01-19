@@ -4,26 +4,28 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Eventname:</strong>
+  <strong>Event Name:</strong>
   <%= @event.eventname %>
 </p>
 
 <p>
-  <strong>Eventlocation:</strong>
+  <strong>Event Location:</strong>
   <%= @event.eventlocation %>
 </p>
 
 <p>
-  <strong>Eventdate:</strong>
+  <strong>Event Date:</strong>
   <%= @event.eventdate %>
 </p>
 
 <p>
-  <strong>Eventnotes:</strong>
+  <strong>Event Notes:</strong>
   <%= @event.eventnotes %>
 </p>
 
+<% if @event.user == current_user %>
 <%= link_to 'Edit', edit_event_path(@event) %> |
+<% end %>
 <%= link_to 'Back', events_path %>
 
 </div>
