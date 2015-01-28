@@ -1,46 +1,18 @@
 <%= render 'layouts/nav_sheets' %>
 <div class="content-events">
-    <h3>Enter your event information</h3>
+    <h1 style="margin:25px 0 60px 0">My Events <span style="float:right"><%= link_to 'New Event', new_event_path, class: "home-buttons" %><span></h1>
 
-      <p>Your assistant will take this and find the contacts attending this event.</p>
+      <p>Your assistant will use this information to find prospectects who are attending this event.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Username</th>
-      <th>Event Name</th>
-      <th>Event Location</th>
-      <th>Event Date</th>
-      <th>Event Notes</th>
-      <th>Assignment Deadline</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<% @events.each do |event| %>
+  <p><%= link_to "#{event.eventname}, #{event.eventlocation}", event %></strong><span class="small"><%= link_to 'Edit', edit_event_path(event) %>
+        <%= link_to 'Delete', event, method: :delete, data: { confirm: 'Are you sure?' } %></span></p><hr style="margin-top:-20px">
 
-  <tbody>
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= event.user.email if event.user %></td>
-        <td><%= event.eventname %></td>
-        <td><%= event.eventlocation %></td>
-        <td><%= event.eventdate %></td>
-        <td><%= event.eventnotes %></td>
-        <td><%= event.deadline %></td>
-        <td><%= link_to 'Show', event %></td>
-        <% if event.user == current_user %>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% end %>
+
+
 
 <br>
 
-<% if user_signed_in? %>
-<%= link_to 'New Event', new_event_path %>
-<% end %>
+
 </div>
