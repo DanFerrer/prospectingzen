@@ -1,0 +1,76 @@
+<%= render 'layouts/nav_sheets' %>
+<div class="content-contacts">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @contact.name %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @contact.company %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @contact.title %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @contact.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @contact.phone %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @contact.address %>
+</p>
+
+<p>
+  <strong>LinkedIn:</strong>
+  <%= @contact.linkedin %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @contact.twitter %>
+</p>
+
+<p>
+  <strong>Facebook:</strong>
+  <%= @contact.facebook %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @contact.birthday %>
+</p>
+
+<p>
+  <strong>Previous Company:</strong>
+  <%= @contact.previouscompany %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @contact.notes %>
+</p>
+
+<p>
+  <strong>Personal Note:</strong>
+  <%= @contact.personalnote %>
+</p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @contact.duedate %>
+</p>
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+</div>

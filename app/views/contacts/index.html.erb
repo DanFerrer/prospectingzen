@@ -1,0 +1,29 @@
+<%= render 'layouts/nav_sheets' %>
+<div class="content-events">
+
+<h1>Listing contacts</h1>
+
+
+    <% @contacts.each do |contact| %>
+        <p><strong>Name: </strong><%= contact.name %></p>
+        <p><strong>Company: </strong><%= contact.company %></p>
+        <p><strong>Title: </strong><%= contact.title %></p>
+        <p><strong>Email: </strong><%= contact.email %></p>
+        <p><strong>Phone: </strong><%= contact.phone %></p>
+        <p><strong>Address: </strong><%= contact.address %></p>
+        <p><strong>LinkedIn: </strong><%= contact.linkedin %></p>
+        <p><strong>Twitter: </strong><%= contact.twitter %></p>
+        <p><strong>Facebook: </strong><%= contact.facebook %></p>
+        <p><strong>Birthday </strong><%= contact.birthday %></p>
+        <p><strong>Previous Company: </strong><%= contact.previouscompany %></p>
+        <p><strong>Notes: </strong><%= contact.notes %></p>
+        <p><strong>Personal Notes:</strong><%= contact.personalnote %></p>
+        <p><strong>Due Date: </strong><%= contact.duedate %></p>
+        <p><%= link_to 'Show', contact %></p>
+        <p><%= link_to 'Edit', edit_contact_path(contact) %></p>
+        <p><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <% end %>
+
+<br>
+
+<%= link_to 'New Contact', new_contact_path %>

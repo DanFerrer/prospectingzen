@@ -1,0 +1,2 @@
+module LeadgensHelper
+end
