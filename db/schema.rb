@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150119222851) do
+ActiveRecord::Schema.define(version: 20150127235341) do
+
+  create_table "contacts", force: true do |t|
+    t.string   "name"
+    t.string   "company"
+    t.string   "title"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "address"
+    t.string   "linkedin"
+    t.string   "twitter"
+    t.string   "facebook"
+    t.string   "previouscompany"
+    t.string   "notes"
+    t.string   "personalnote"
+    t.date     "duedate"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.date     "birthday"
+  end
 
   create_table "events", force: true do |t|
     t.string   "eventname"
@@ -25,9 +44,18 @@ ActiveRecord::Schema.define(version: 20150119222851) do
     t.string   "spreadsheet_content_type"
     t.integer  "spreadsheet_file_size"
     t.datetime "spreadsheet_updated_at"
+    t.date     "deadline"
   end
 
   add_index "events", ["user_id"], name: "index_events_on_user_id"
+
+  create_table "leadgens", force: true do |t|
+    t.text     "companies"
+    t.date     "deadline"
+    t.integer  "leadsper"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

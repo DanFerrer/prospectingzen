@@ -12,6 +12,7 @@
       <th>Event Location</th>
       <th>Event Date</th>
       <th>Event Notes</th>
+      <th>Assignment Deadline</th>
       <th></th>
       <th></th>
       <th></th>
@@ -26,6 +27,7 @@
         <td><%= event.eventlocation %></td>
         <td><%= event.eventdate %></td>
         <td><%= event.eventnotes %></td>
+        <td><%= event.deadline %></td>
         <td><%= link_to 'Show', event %></td>
         <% if event.user == current_user %>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>

@@ -1,7 +1,14 @@
 <% if user_signed_in? %>
 <%= render 'layouts/nav_sheets' %>
 <div class="content-sheets">
-<p>Looks like you don't have any work completed just yet. Give your assistant a task and check back after you've gotten the email notifying you that they have finished.</p>
+
+<p>Give your assistant a task and check back after you've gotten the email notifying you that they have finished.</p><hr>
+
+	<p><%= link_to 'New Contact', new_contact_path, class: "home-buttons" %></p><p>information about creating contacts </p><hr>
+
+	<p><%= link_to 'Add Event Info', new_event_path, class: "home-buttons" %></p><p>instructions for making events</p><hr>
+	<p><%= link_to 'Generate Leads', new_leadgen_path, class: "home-buttons" %></p> <p>instructions for making leads</p>
+
 </div>
 <%= link_to "Edit Profile", edit_user_registration_path %>
 <%= link_to "Logout", destroy_user_session_path, method: :delete %>

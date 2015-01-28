@@ -1,5 +1,7 @@
 Prospectingzen::Application.routes.draw do
 
+  resources :leadgens
+
   #root :to => 'pages#home'
   
   #get 'sheets' => 'pages#sheets'
@@ -9,12 +11,14 @@ Prospectingzen::Application.routes.draw do
   authenticated :user do
     root 'pages#home', as: :authenticated_root
     resources :events
+    resources :contacts
     get 'feedback' => 'pages#feedback'
    # get 'events' => 'pages#events'
     get 'referrals' => 'pages#referrals'
     get 'landing' => 'pages#landing'
     get 'assistants' => 'pages#assistants'
     resources :events
+    resources :contacts
   end
   unauthenticated do
     root 'devise/sessions#new', as: :unauthenticated_root

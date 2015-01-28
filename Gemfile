@@ -3,9 +3,11 @@ source 'http://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 gem 'jquery-rails'
+gem 'jquery-ui-rails', '~> 4.2.1'
 gem 'devise'
 gem 'simple_form'
 gem 'paperclip', '~>3.0'
+gem 'simple-form-datepicker'
 # Use sqlite3 as the database for Active Record
 
 group :production do

@@ -10,9 +10,14 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require turbolinks
 //= require jquery
+//= require jquery.ui.all
 //= require jquery_ujs
 //= require dataTables/jquery.dataTables
-//= require turbolinks
 //= require bootstrap
 //= require_tree .
+
+$(document).on("page:load ready", function(){
+    $("input.datepicker").datepicker();
+});
