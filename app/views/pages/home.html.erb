@@ -4,10 +4,14 @@
 
 <p>Give your assistant a task and check back after you've gotten the email notifying you that they have finished.</p><hr>
 
-	<p><%= link_to 'New Contact', new_contact_path, class: "home-buttons" %></p><p>information about creating contacts </p><hr>
+		<p><%= link_to 'Generate Leads', new_leadgen_path, class: "home-buttons" %></p> <p>Build your sales funnel by passing over a list of the companies you're targeting. Your assistant will find detailed contact information for the right stakeholders.</p><hr>
 
-	<p><%= link_to 'Add Event Info', new_event_path, class: "home-buttons" %></p><p>instructions for making events</p><hr>
-	<p><%= link_to 'Generate Leads', new_leadgen_path, class: "home-buttons" %></p> <p>instructions for making leads</p>
+
+	<p><%= link_to 'Add New Event', new_event_path, class: "home-buttons" %></p><p>Give your assistant information about the event so they can build a list. </p><hr>
+
+	<p><%= link_to 'VIP Contact', new_contact_path, class: "home-buttons" %></p><p>Already know the name of someone important? Your freelancer will find out the rest of their contact informatoin and create a contact card complete with their social accounts, birthday, address, and more.</p>
+
+
 
 </div>
 <%= link_to "Edit Profile", edit_user_registration_path %>

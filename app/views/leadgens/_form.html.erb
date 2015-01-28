@@ -1,13 +1,16 @@
 <%= simple_form_for @leadgen, html: {multipart: true} do |f| %>
   <%= f.error_notification %>
-
+	<div class="deadline">
+	<%= f.input :deadline, :as => "string", :label =>"Freelancer deadline for this assignment" %>
+</div>
+<hr>
   <div class="form-inputs">
-    <%= f.input :companies %>
-    <%= f.input :deadline, :as => "string" %>
+    <%= f.input :companies, :input_html => { :rows => 8, :placeholder => "Please separate each company with a comma." } %>
+
     <%= f.input :leadsper, :label => "Number of leads per company", :placeholder => "Enter a number" %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, :value => "Get some leads!" %>
+    <%= f.button :submit, :value => "Generate leads" %>
   </div>
 <% end %>

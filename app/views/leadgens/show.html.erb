@@ -1,9 +1,8 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/nav_sheets' %>
+<div class="content-events">
 
-<p>
-  <strong>Companies:</strong>
-  <%= @leadgen.companies %>
-</p>
+
+<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Deadline:</strong>
@@ -11,8 +10,14 @@
 </p>
 
 <p>
-  <strong>Leadsper:</strong>
+  <strong>Companies:</strong>
+  <%= @leadgen.companies %>
+</p>
+
+<p>
+  <strong>Leads per company:</strong>
   <%= @leadgen.leadsper %>
 </p>
 
-<%= link_to 'Edit', edit_leadgen_path(@leadgen) %> |
+<%= link_to 'Edit', edit_leadgen_path(@leadgen) %>
+</div>

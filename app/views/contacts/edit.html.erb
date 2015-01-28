@@ -1,11 +1,10 @@
 <%= render 'layouts/nav_sheets' %>
 <div class="content-events">
-		<h3>Enter a persons name and let your assistant find the rest of their information</h3>
 
-<h1>Editing contact</h1>
+<h1 style="margin:25px;">Editing contact card <span style="float:right"><small><%= link_to 'View Card', @contact %></small></span></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @contact %> |
+
 
 </div>
