@@ -11,7 +11,14 @@
     <%= f.input :leadsper, :label => "Number of leads per company", :placeholder => "How many leads should your freelancer find per company?" %>
   </div>
 
+<% if current_page?(new_leadgen_path) %> 
   <div class="form-actions">
     <%= f.button :submit, :value => "Generate leads" %>
   </div>
+<% else %>
+<div class="form-actions">
+    <%= f.button :submit, :value => "Update assignment" %>
+  </div>       
+<% end %> 
+
 <% end %>
