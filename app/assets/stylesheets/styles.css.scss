@@ -11,7 +11,6 @@
 }
 
 .login-form {
-    width: 70%!important;
     margin: 0 auto;
 }
 
@@ -44,10 +43,6 @@ color: #999;
 .checkbox-left {
     float: right;
     margin-right: 58px;
-}
-
-.login-button {
-    margin-left: 58px;
 }
 
 
@@ -382,6 +377,10 @@ margin-left: -140px;
 .rating span.checked ~ span label {
     background:#F90;
     color:#FFF;
+}
+
+.radio label, .checkbox label {
+margin-top: 3px;
 }
 
 blockquote {
