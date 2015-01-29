@@ -1,7 +1,11 @@
 class PagesController < ApplicationController
   def home
   end
-  
-  def action
+
+  def assistants
+   @events = Event.all
+   @leadgens = Leadgen.all
+   @contacts = Contact.all
   end
+
 end	

@@ -336,15 +336,6 @@ textarea {
     border-right:1px solid rgba(0, 0, 0, .1); */
 }
 
-.content-contacts {
-    margin: 0 auto;    
-    height: 80%;
-    max-width: 500px;
-    padding: 20px;
-    border: 1px solid grey;
-    /*border-left:1px solid rgba(0, 0, 0, .1);
-    border-right:1px solid rgba(0, 0, 0, .1); */
-}
 
 .content-referalls {
     margin: 0 auto;    
@@ -479,4 +470,28 @@ h6 {
     font-size: 9px;
     margin: 0;
     float: right;
+}
+
+.stream-container {
+    width: 100%;
+    border: 1px dashed rgba(0,0,0,0.2);
+    display: block;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 3px;
+}
+
+.content-contacts {
+    margin: 0 auto;    
+    max-width: 600px;
+    padding: 20px;
+    /*border-left:1px solid rgba(0, 0, 0, .1);
+    border-right:1px solid rgba(0, 0, 0, .1); */
+}
+.contact-card {
+    width: 100%;
+    border: 1px dashed rgba(0,0,0,0.2);
+    display: block;
+    padding: 20px;
+    border-radius: 3px;
 }

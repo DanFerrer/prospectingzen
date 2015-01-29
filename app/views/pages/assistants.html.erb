@@ -1,8 +1,21 @@
 <%= render 'layouts/nav_sheets' %>
 <div class="content-events">
-		<h3>Meet your assistant</h3>
+		<h1 style="margin:25px 0">Stream of Assignments</h1>
 
-			<p>You haven't been assigned someone to help with your work yet. Please reach out to <a href="mailto:support@prospectingzen.com">support@prospectingzen.com</a> and we'll be able to pair you with the right person.</p>
+<div class="stream-container">
+	<h3>Lead Generation Campaigns</h3>
+		<%= render 'leadgens/leadgen' %>
+</div>	
+
+<div class="stream-container">
+	<h3>Latest Events</h3>
+		<%= render 'events/events' %>
+</div>
+
+<div class="stream-container">
+	<h3>VIP Contacts</h3>
+		<%= render 'contacts/contacts' %>
+</div>
 
 <!-- close container div -->
 </div>   

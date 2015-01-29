@@ -5,6 +5,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Name:</strong>
+  <%= @leadgen.title %>
+</p>
+
+<p>
   <strong>Deadline:</strong>
   <%= @leadgen.deadline %>
 </p>
@@ -19,5 +24,5 @@
   <%= @leadgen.leadsper %>
 </p>
 
-<%= link_to 'Edit', edit_leadgen_path(@leadgen) %>
+<%= link_to 'Edit', edit_leadgen_path(@leadgen) %> | <%= link_to 'Delete', @leadgen, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>

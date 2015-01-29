@@ -3,8 +3,19 @@
 
     <%= f.input :name %>
     <%= f.input :company %>
-        <p>Your freelancer can take it from here.</p>
+    <%= f.input :duedate, :as => "string", :label =>"Assignment Deadline"  %>
+        
+       <% if current_page?(new_contact_path) %> 
+        <p class="center">Your freelancer can take it from here.</p>
+        <% else %>
+       <% end %> 
+        
+    <div class="form-actions center">
+        <%= f.button :submit %>
+    </div>
+
     <hr>
+
     <%= f.input :title %>
     <%= f.input :email %>
     <%= f.input :phone %>
@@ -16,9 +27,7 @@
     <%= f.input :previouscompany %>
     <%= f.input :notes %>
     <%= f.input :personalnote %>
-    <%= f.input :duedate %>
+    
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+  <br />
 <% end %>

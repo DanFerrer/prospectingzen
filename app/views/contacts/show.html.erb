@@ -1,52 +1,25 @@
 <%= render 'layouts/nav_sheets' %>
 <div class="content-contacts">
 <p id="notice"><%= notice %></p>
+ 
 
+<div class="contact-card">
 <p>
-  <strong>Name:</strong>
-  <%= @contact.name %>
+  <strong><%= @contact.name %></strong>, <%= @contact.title %> at <%= @contact.company %>
 </p>
-
 <p>
-  <strong>Company:</strong>
-  <%= @contact.company %>
+  <%= @contact.email %> &nbsp; <%= @contact.phone %>
 </p>
-
 <p>
-  <strong>Title:</strong>
-  <%= @contact.title %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @contact.email %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @contact.phone %>
-</p>
-
-<p>
-  <strong>Address:</strong>
   <%= @contact.address %>
 </p>
-
+<hr>
 <p>
-  <strong>LinkedIn:</strong>
-  <%= @contact.linkedin %>
+
+  <%= @contact.linkedin %> &nbsp; <%= @contact.twitter %> &nbsp; <%= @contact.facebook %>
 </p>
 
-<p>
-  <strong>Twitter:</strong>
-  <%= @contact.twitter %>
-</p>
-
-<p>
-  <strong>Facebook:</strong>
-  <%= @contact.facebook %>
-</p>
-
+<hr>
 <p>
   <strong>Birthday:</strong>
   <%= @contact.birthday %>
@@ -67,10 +40,12 @@
   <%= @contact.personalnote %>
 </p>
 
+</div>
+
 <p>
-  <strong>Due date:</strong>
+  <strong>Assignment Deadline:</strong>
   <%= @contact.duedate %>
 </p>
 
-<%= link_to 'Edit', edit_contact_path(@contact) %>
+<%= link_to 'Edit', edit_contact_path(@contact) %> | <%= link_to 'Delete', @contact, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
