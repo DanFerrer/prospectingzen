@@ -7,6 +7,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'paperclip', '~>3.0'
 gem 'simple-form-datepicker'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 group :production do
 	gem 'pg'

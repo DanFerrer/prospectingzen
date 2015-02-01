@@ -3,6 +3,7 @@
 
     <%= f.input :name %>
     <%= f.input :company %>
+    <%= f.input :title %>
     <%= f.input :duedate, :as => "string", :label =>"Assignment Deadline"  %>
         
        <% if current_page?(new_contact_path) %> 
@@ -16,18 +17,19 @@
 
     <hr>
 
-    <%= f.input :title %>
     <%= f.input :email %>
     <%= f.input :phone %>
     <%= f.input :address %>
-    <%= f.input :linkedin %>
+    <%= f.input :linkedin, :label => "LinkedIn" %>
     <%= f.input :twitter %>
     <%= f.input :facebook %>
     <%= f.input :birthday %>
-    <%= f.input :previouscompany %>
-    <%= f.input :notes %>
-    <%= f.input :personalnote %>
+    <%= f.input :previouscompany, :label => "Previous Company" %>
+    <%= f.input :notes, :placeholder => "e.g. We met at CES and talked about 3D printing"%>
+    <%= f.input :personalnote, :label => "Personal Notes", :placeholder => "e.g. Avid jogger, big Knick fan, etc" %>
     
+
+
 
   <br />
 <% end %>
