@@ -11,7 +11,7 @@ Prospectingzen::Application.routes.draw do
     get 'feedback' => 'pages#feedback'
     get 'referrals' => 'pages#referrals'
     get 'landing' => 'pages#landing'
-    resources :events, :contacts, :leadgens
+    resources :events, :contacts, :leadgens, :charges
     get 'assistants' => 'pages#assistants'
 
   end
