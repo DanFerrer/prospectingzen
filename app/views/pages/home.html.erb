@@ -4,19 +4,21 @@
 
 <p>Give your assistant a task and check back after you've gotten the email notifying you that they have finished.</p><hr>
 
-		<p class="center"><%= link_to 'Generate Leads', new_leadgen_path, class: "button" %><%= link_to 'VIP Contact', new_contact_path, class: "button" %><%= link_to 'Add New Event', new_event_path, class: "button" %></p> 
+		<p class="center"><%= link_to 'Generate Leads', new_leadgen_path, class: "button" %>&nbsp;&nbsp;&nbsp;<%= link_to 'VIP Contact', new_contact_path, class: "button" %>&nbsp;&nbsp;&nbsp;<%= link_to 'Add New Event', new_event_path, class: "button" %></p> 
 
-
-		<p><h3 style="margin-bottom:5px;">Generate Leads</h3>
-		Build your sales funnel by passing over a list of the companies you're targeting. Your assistant will find detailed contact information for the right stakeholders.</p>
-
-		<p><h3 style="margin-bottom:5px;">Event Information</h3>
-	Provide your assistant with information about upcoming events so they can build a list of leads. </p>
+		<blockquote>
+		<%= link_to new_leadgen_path do %><h4>Generate Leads</h4><% end %>
+		Build your sales funnel by passing over a list of the companies you're targeting. Your assistant will find detailed contact information for the right stakeholders.
+		</blockquote>
  
-	<p><h3 style="margin-bottom:5px;">VIP Contacts</h3>
-	Already know the name of someone important? Your freelancer will find out the rest of their contact informatoin and create a contact card complete with their social accounts, birthday, address, and more.</p>
+	<blockquote>
+		<%= link_to new_contact_path do %><h4>VIP Contacts</h4><% end %>
+	Already know the name of someone important? Your freelancer will find out the rest of their contact informatoin and create a contact card complete with their social accounts, birthday, address, and more.</blockquote>
 
 
+		<blockquote>
+		<%= link_to new_event_path do %><h4>Event Information</h4><% end %>
+	Provide your assistant with information about upcoming events so they can build a list of leads.</blockquote>
 
 </div>
 
