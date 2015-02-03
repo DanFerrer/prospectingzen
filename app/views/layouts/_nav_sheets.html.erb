@@ -1,9 +1,9 @@
 <nav>
     <a href="/"><div class="logo"><img src="http://ryanfsalerno.com/hosting/imgs/squarelogo.png" class="logo-img"></div><a/>
 
-<ul>
-    <li><a href="/">New Assignment</a></li>
-    <li><%= link_to "Assistant Center", assistants_path %></li>
+<ul class="leftnav">
+    <li class="leftnav"><a href="/">New Assignment</a></li>
+    <li class="leftnav"><%= link_to "Assistant Center", assistants_path %></li>
 </ul>
             <div>
 <div class="addnew">
@@ -11,10 +11,10 @@
     <span>My Assignments</span>
     <div class="nav-divider"></div>
 </div>
- <ul>
-    <li><%= link_to "Lead Generation", leadgens_path %></li>
-    <li><%= link_to "My Events", events_path %></li>
-    <li><%= link_to "VIP Contacts", contacts_path %></li>
+ <ul class="leftnav">
+    <li class="leftnav"><%= link_to "Lead Generation", leadgens_path %></li>
+    <li class="leftnav"><%= link_to "My Events", events_path %></li>
+    <li class="leftnav"><%= link_to "VIP Contacts", contacts_path %></li>
     
     <!--<li><a href="#4">Sheet 4</a></li>
     <li><a href="#5">Sheet 5</a></li>
@@ -37,9 +37,20 @@
     </div>
 
     <div class="top-nav">
+
+<!--<a href="#" class="gear-icon">&nbsp;&nbsp;&nbsp;&nbsp;</a> -->
+      <ul class="nav navbar-nav" >
+            <li><%= link_to "Feedback", feedback_path, {:style => 'margin-right:20px'} %></li>
+    <li><%= link_to "Referrals", referrals_path, {:style => 'margin-right:10px'} %></li>
+        <li >
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= "#{current_user.name}" %> <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      </ul>
+
+
+
       <!-- margin-right feedback 20, referrals 10 -->
-        <%= link_to "Feedback", feedback_path, {:style => 'margin-right:20px'} %>
-        <%= link_to "Referrals", referrals_path, {:style => 'margin-right:10px'} %>
-        <a href="#" class="gear-icon">&nbsp;&nbsp;&nbsp;&nbsp;</a> 
     </div>
     </header>
