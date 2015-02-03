@@ -1,5 +1,6 @@
 Prospectingzen::Application.routes.draw do
 
+  resources :charges
   #root :to => 'pages#home'
   
   #get 'sheets' => 'pages#sheets'
@@ -11,7 +12,7 @@ Prospectingzen::Application.routes.draw do
     get 'feedback' => 'pages#feedback'
     get 'referrals' => 'pages#referrals'
     get 'landing' => 'pages#landing'
-    resources :events, :contacts, :leadgens, :charges
+    resources :events, :contacts, :leadgens
     get 'assistants' => 'pages#assistants'
 
   end
