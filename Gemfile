@@ -6,7 +6,7 @@ gem 'jquery-ui-rails', '~> 4.2.1'
 gem 'devise'
 gem 'simple_form'
 gem 'paperclip', github: 'thoughtbot/paperclip'
-# gem 'paperclip', '~> 3.0'
+gem 'aws-sdk', '~> 1.20.0'
 gem 'simple-form-datepicker'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
