@@ -1,6 +1,7 @@
 class LeadgensController < ApplicationController
   before_action :set_leadgen, only: [:show, :edit, :update, :destroy]
 
+
   # GET /leadgens
   # GET /leadgens.json
   def index
@@ -10,6 +11,7 @@ class LeadgensController < ApplicationController
   # GET /leadgens/1
   # GET /leadgens/1.json
   def show
+    @leadgens = Leadgen.all
   end
 
   # GET /leadgens/new
@@ -69,6 +71,6 @@ class LeadgensController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def leadgen_params
-      params.require(:leadgen).permit(:companies, :deadline, :leadsper, :title)
+      params.require(:leadgen).permit(:companies, :deadline, :leadsper, :title, :leadgensheet)
     end
 end

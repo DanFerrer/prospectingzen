@@ -1,0 +1,16 @@
+<%= simple_form_for @leadgen, html: { multipart: true } do |f| %>
+  <%= f.error_notification %>
+  <div class="form-inputs">
+    <p style="margin:5px 0;">Upload Spreedsheet</p>
+    <%= f.file_field :leadgensheet, :label => "Upload Spreadsheet" %>
+  </div>
+
+  <div class="form-actions upload-sheets">
+    <%= f.button :submit, :value => "Confirm Upload" %>
+  </div>     
+
+  <p><%= link_to "#{@leadgen.leadgensheet_file_name}", @leadgen.leadgensheet.url  %>
+  </p>
+  <hr style="margin-top:-20px">
+
+<% end %>
