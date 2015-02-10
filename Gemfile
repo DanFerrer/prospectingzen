@@ -9,6 +9,7 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk', '~> 1.20.0'
 gem 'simple-form-datepicker'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'acts_as_follower'
 
 group :production do
 	gem 'pg'

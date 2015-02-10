@@ -1,7 +1,7 @@
 <%= render 'layouts/nav_sheets' %>
 <div class="content-events">
 
-<%= image_tag @event.spreadsheet.url, style:"width: 25px;" %>
+<div class="contact-card">
 
 <p>
   <strong>Event Name:</strong>
@@ -22,6 +22,8 @@
   <strong>Event Notes:</strong>
   <%= @event.eventnotes %>
 </p>
+
+</div>
 
 <p>
   <strong>Assignment Deadline:</strong>

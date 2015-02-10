@@ -1,7 +1,8 @@
 <% @events.each do |event| %>
   		<p><%= link_to "#{event.eventname}, #{event.eventlocation}", event %>
   			<span class="small">
-  				<%= link_to 'Edit', edit_event_path(event) %>
+  				<%= "#{event.deadline}" %>
+  				<!-- | <%= link_to 'Edit', edit_event_path(event) %>-->
   			</span>
   		</p>
   		<hr style="margin-top:-20px">

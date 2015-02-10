@@ -8,10 +8,7 @@
   <%= @leadgen.title %>
 </p>
 
-<p>
-  <strong>Deadline:</strong>
-  <%= @leadgen.deadline %>
-</p>
+
 
 <p>
   <strong>Companies:</strong>
@@ -19,13 +16,25 @@
 </p>
 
 <p>
+  <strong>Seniority:</strong>
+  <%= @leadgen.seniority %>
+</p>
+
+<p>
   <strong>Leads per company:</strong>
   <%= @leadgen.leadsper %>
 </p>
 
+</div>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @leadgen.deadline %>
+</p>
+
 <%= link_to 'Edit', edit_leadgen_path(@leadgen) %> | <%= link_to 'Delete', @leadgen, method: :delete, data: { confirm: 'Are you sure?' } %>
 
-</div>
+
 
 <div class="upload-sheets-box">
 <%= render 'leadgenupload' %>

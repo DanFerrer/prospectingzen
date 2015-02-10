@@ -6,6 +6,10 @@
 <hr>
   <div class="form-inputs">
     <%= f.input :title, :label => "Title of this lead generation campaign", :placeholder => "What should we call this assignment?" %>
+    <%= f.input :seniority, as: :check_boxes, :label => "Select the seniority levels of the prospects you're targeting", :collection => [ "C-Level Excecutive", "Vice President", "Director", "Senior", "Manager", "Owner", "Partner", ], :input_html => {:name => "search[seniority][]", :multiple => true} %>
+
+
+
     <%= f.input :companies, :input_html => { :rows => 8, :placeholder => "Please separate each company with a comma." } %>
 
     <%= f.input :leadsper, :label => "Number of leads per company", :placeholder => "How many leads should your freelancer find per company?" %>

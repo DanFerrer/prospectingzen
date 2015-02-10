@@ -5,6 +5,7 @@ class ContactsController < ApplicationController
   # GET /contacts.json
   def index
     @contacts = Contact.all
+    @contacts = Contact.all.order("duedate ASC")
   end
 
   # GET /contacts/1

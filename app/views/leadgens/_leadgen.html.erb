@@ -1,7 +1,9 @@
 <% @leadgens.each do |leadgen| %>
 	<p><%= link_to "#{leadgen.title}", leadgen %>
  		<span class="small">
- 			<%= link_to 'Edit', edit_leadgen_path(leadgen) %>
+ 			<%= "#{leadgen.deadline}" %>
+ 			<!-- | 
+ 			<%= link_to 'Edit', edit_leadgen_path(leadgen) %>-->
 		</span>
 	</p>
 	<hr style="margin-top:-20px">

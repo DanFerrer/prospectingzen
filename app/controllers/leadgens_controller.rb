@@ -6,6 +6,7 @@ class LeadgensController < ApplicationController
   # GET /leadgens.json
   def index
     @leadgens = Leadgen.all
+    @leadgens = Leadgen.all.order("deadline ASC")
   end
 
   # GET /leadgens/1
@@ -17,10 +18,12 @@ class LeadgensController < ApplicationController
   # GET /leadgens/new
   def new
     @leadgen = Leadgen.new
+    tag_ids = params[:tag_ids]
   end
 
   # GET /leadgens/1/edit
   def edit
+    tag_ids = params[:tag_ids]
   end
 
   # POST /leadgens
@@ -71,6 +74,6 @@ class LeadgensController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def leadgen_params
-      params.require(:leadgen).permit(:companies, :deadline, :leadsper, :title, :leadgensheet)
+      params.require(:leadgen).permit(:companies, :deadline, :leadsper, :title, :leadgensheet, :seniority)
     end
 end

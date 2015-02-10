@@ -5,6 +5,7 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
+    @events = Event.all.order("deadline ASC")
   end
 
   def show
