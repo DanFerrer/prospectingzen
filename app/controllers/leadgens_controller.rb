@@ -74,6 +74,6 @@ class LeadgensController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def leadgen_params
-      params.require(:leadgen).permit(:companies, :deadline, :leadsper, :title, :leadgensheet, :seniority)
+      params.require(:leadgen).permit(:companies, :deadline, :leadsper, :title, :leadgensheet, :seniority => [])
     end
 end

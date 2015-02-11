@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150210143512) do
+ActiveRecord::Schema.define(version: 20150211014910) do
 
   create_table "contacts", force: true do |t|
     t.string   "name"
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 20150210143512) do
     t.string   "leadgensheet_content_type"
     t.integer  "leadgensheet_file_size"
     t.datetime "leadgensheet_updated_at"
-    t.string   "seniority"
+    t.text     "seniority",                 limit: 255
   end
 
   create_table "users", force: true do |t|
